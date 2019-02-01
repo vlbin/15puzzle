@@ -111,7 +111,7 @@ function startGame() {
     }
 }
 /**
- * Om användaren klickar på shuffleknappen kallas metoden
+ * Om användaren klickar på shuffleknappen kallas funktion
  * shuffleTiles på.
  */
 shuffleButton.onclick = function () {
@@ -175,7 +175,7 @@ function tileClick(clicked) {
  * @param y klickade brickans y-koordinat
  */
 function moveTile(cpuMove, tiles, clickedTile, x, y) {
-    if (getCellsAround(tiles, clickedTile, x, y, "up") || getCellsAround(tiles, clickedTile, x, y, "down") || getCellsAround(tiles, clickedTile, x, y, "left") || getCellsAround(tiles, clickedTile, x, y, "right")) {
+    if (getTilesAround(tiles, clickedTile, x, y, "up") || getTilesAround(tiles, clickedTile, x, y, "down") || getTilesAround(tiles, clickedTile, x, y, "left") || getTilesAround(tiles, clickedTile, x, y, "right")) {
         console.log("Tile moved");
     }
     else {
@@ -206,7 +206,7 @@ function moveTile(cpuMove, tiles, clickedTile, x, y) {
  * 
  * @return {boolean} true om brickan är flyttbar, annars false. 
  */
-function getCellsAround(tiles, clickedTile, x, y, dir) {
+function getTilesAround(tiles, clickedTile, x, y, dir) {
     if (dir === "up") {
         newX = x;
         newY = y - 1;
