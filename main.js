@@ -5,7 +5,11 @@ var win = document.getElementById("win");
 var newGame = document.getElementById("newgame");
 var w = game.clientWidth;
 var h = game.clientHeight;
-var size = 2;
+
+//Variabel där ni kan ändra storleken på pusslet. Ger antal rader/kolumner.
+var size = 4;
+
+
 var blankPos;
 var clickedTile;
 var tiles;
@@ -135,7 +139,6 @@ function gameSolved() {
         for (var i = 0; i < tiles.length; i = i + size) {
             for (var j = 0; j < size; j++) {
                 if (i + j < tiles.length) {
-                    console.log(tiles[j + i].id, Math.round(tiles[j + i].x + i), Math.round(tiles[j + i].y), Math.round((tiles[j + i].x + i) / size));
                     if (parseInt(tiles[j + i].id) === Math.round(tiles[j + i].x + i) && Math.round(tiles[j + i].y) === parseInt((tiles[j + i].x + i) / size)) {
                         correct++;
                     }
@@ -159,7 +162,6 @@ function gameSolved() {
  */
 function tileClick(clicked) {
     clickedTile = parseInt(clicked.innerHTML - 1);
-    //console.log(clickedTile);
     cpuMove = false;
     moveTile(cpuMove, tiles, clickedTile, Math.round(tiles[clickedTile].x), Math.round(tiles[clickedTile].y));
 }
