@@ -9,16 +9,18 @@
 html, body {
     height: 100%;
 }
+
 h1 {
     font-weight: 400;
     font-size: 32px;
 }
+
 main {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     width: 800px;
-    padding-top: 2em;
+    padding-top: 16px;
 }
 
 #game {
@@ -42,7 +44,7 @@ main {
 }
 
 #shufflebutton {
-    margin-top: 1em;
+    margin-top: 16px;
 }
 
 #shufflebutton:active {
@@ -123,20 +125,30 @@ noscript {
 
 @media screen and (max-height: 500px), (max-width: 500px) {
     main {
-        width: 360px;
+        width: 320px;
     }
     #game {
-        width: 360px;
-        height: 360px;
+        width: 320px;
+        height: 240px;
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-height: 400px), (max-width: 400px) {
+    main {
+        width: 320px;
+    }
+    #game {
+        width: 320px;
+        height: 260px;
+    }
+}
+
+@media screen and (max-height: 320px), (max-width: 320px) {
     main {
         width: 300px;
     }
     #game {
         width: 300px;
-        height: 300px;
+        height: 200px;
     }
 }
