@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,15 +8,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
+
 <body>
-    <main id="gameContainer">
-        <canvas id="gameCanvas" width="600" height="600">
-        </canvas>
-
-
-
+    <noscript>
+        <h1>
+            You need to enable JavaScript!
+        </h1>
+    </noscript>
+    <div id="win">
+        <h1>
+            Puzzle Solved!
+        </h1>
+        <button id="newgame">New Game</button>
+    </div>
+    <main>
+        <div id="gamecontainer">
+            <div id="game"></div>
+        </div>
+        <button id="shufflebutton">Shuffle Tiles!</button>
     </main>
-    <script src="game.js"></script>
+    <script src="main.js"></script>
 </body>
+
 </html>
